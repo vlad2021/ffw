@@ -1,0 +1,49 @@
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <title>FFW 2</title>
+    </head>
+    <body>
+        <h1>
+            Parser ( see in Console)
+        </h1>
+       
+       <script>
+
+
+            // Simple parser (not support ie 10)
+
+
+            function parseURL(href) {
+                var match = href.match(/^(https?\:)\/\/(([^:\/?#]*)(?:\:([0-9]+))?)([\/]{0,1}[^?#]*)(\?[^#]*|)(#.*|)$/);
+                return match && {
+                    hostname: match[3],
+                    pathname: match[5],
+                    hash: match[7]
+                }
+            }
+
+            // Parser (with support ie 10)
+
+            // function parseURL(url) {
+            //     var parser = document.createElement("a");
+            //     parser.href = url;
+            //     parser.href = parser.href;
+            //     var properties = [];
+            //     for (var i = 0, n = properties.length; i < n; i++) {
+            //     this[properties[i]] = parser[properties[i]];
+            //     }
+            //     this.pathname = (parser.pathname.charAt(0) !== "/" ? "/" : "") + parser.pathname;
+            //     return parser;
+            // }
+
+
+            let obj = parseURL('http://ffwagency.com/do/any.php?a=1#foo');
+
+            console.log('hostname:', obj.hostname);
+            console.log('pathname:', obj.pathname);
+            console.log('hash:', obj.hash);
+        </script>
+    </body>
+</html>
