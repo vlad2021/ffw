@@ -1,0 +1,17 @@
+{
+  "name": "ffw",
+  "version": "1.0.0",
+  "description": "Test Task",
+  "main": "gulpfile.js",
+  "author": "me",
+  "license": "ISC",
+  "devDependencies": {
+    "gulp": "4.0.0"
+  },
+  "dependencies": {
+    "gulp-concat": "^2.6.1",
+    "gulp-cssnano": "^2.1.3",
+    "gulp-sass": "^4.0.1",
+    "gulp-uglify": "^3.0.1"
+  }
+}

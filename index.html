@@ -1,0 +1,79 @@
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <title>FFW</title>
+        <link href="https://fonts.googleapis.com/css?family=Montserrat:400,500,600,700&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="dist/style.css">
+    </head>
+    <body>
+      <div class="wrapper">
+        <div class="container">
+            <div class="top-title">
+                <h1>
+                    Please Select one font
+                </h1>
+                <ul class="tabs">
+                    <li class="tablinks active" onclick="changeTab(event, 'myFonts')">
+                        My Fonts
+                    </li>
+                    <li class="tablinks" onclick="changeTab(event, 'buyFonts')">
+                        Buy Fonts
+                    </li>
+                </ul>
+            </div>
+
+            <div class="content active" id="myFonts">
+                <div class="column">
+                    <label class="container row">
+                        <input type="radio" name="selector" checked="checked">
+                        <p>Merriweather project is led by Sorkin Type</p>
+                        <span class="colorblock"><span class="bigger green">M</span></span>
+                    </label>
+                </div>
+                <div class="column">
+                    <label class="container">
+                        <input type="radio" name="selector">
+                        <p>Roboto doesn't compromise, allowing letters</p>
+                        <span class="colorblock "><span class="pink">R</span></span>
+                    </label>
+                    <label class="container">
+                        <input type="radio" name="selector">
+                        <p>Noto Sans covers over 30 scripts</p>
+                        <span class="colorblock "><span class="blue">NS</span></span>
+                    </label>
+                </div>
+            </div>
+            <div class="content" id="buyFonts">
+                <div class="column">
+                    <label class="container">
+                        <input type="radio" name="selector2" checked="checked">
+                        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Nemo repudiandae </p>
+                        <span class="colorblock"><span class="green">L</span></span>
+                    </label>
+                    <label class="container">
+                        <input type="radio" name="selector2">
+                        <p>Nemo repudiandae taque ipsum, in saepe dicta? Rerum recusandae autem iste voluptas corporis?</p>
+                        <span class="colorblock "><span class="pink">T</span></span>
+                    </label>
+                </div>
+            </div>            
+        </div>
+      </div>        
+        <script>
+            function changeTab(evt, tabName) {
+            var i, tabcontent, tablinks;
+            tabcontent = document.getElementsByClassName("content");
+            for (i = 0; i < tabcontent.length; i++) {
+                tabcontent[i].style.display = "none";
+            }
+            tablinks = document.getElementsByClassName("tablinks");
+            for (i = 0; i < tablinks.length; i++) {
+                tablinks[i].className = tablinks[i].className.replace(" active", "");
+            }
+            document.getElementById(tabName).style.display = "flex";
+                evt.currentTarget.className += " active";
+            }
+        </script>
+    </body>
+</html>
